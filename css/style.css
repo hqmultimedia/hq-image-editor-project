@@ -1,0 +1,65 @@
+.title-top {
+    transform: translateX(15px);
+    width: 100vmax;
+    text-align: center;
+    margin: 30px 0 60px 0;
+}
+
+
+/* chia cột */
+
+.box-image {
+    --spacing: 25px;
+    --columns: 4;
+    margin-left: calc(-1 * var(--spacing));
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    /* margin-left: 0; */
+    align-items: center;
+    /*min-height: 100vh;*/
+}
+
+.item-image img {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.twentytwenty-wrapper {
+    width: calc(calc(100% / var(--columns)) - var(--spacing) - 0px);
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+    padding: 15px;
+    /* background-color: #161616; */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+}
+
+
+/* End chia cột */
+
+
+/* responsive */
+
+@media (min-width:320px) and (max-width:543px) {
+    .title-top {
+        transform: translateX(17px);
+    }
+    .box-image {
+        --columns: 1;
+    }
+}
+
+@media (min-width:544px) and (max-width:767px) {
+    .box-image {
+        --columns: 2;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .box-image {
+        --columns: 3;
+    }
+}
